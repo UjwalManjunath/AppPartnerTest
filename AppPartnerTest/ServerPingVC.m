@@ -57,7 +57,7 @@
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"http://ec2-54-243-205-92.compute-1.amazonaws.com/Tests/ping.php"]];
     
     [request setHTTPMethod:@"POST"];
-    NSString *params = [[NSString alloc] initWithFormat:@"Password&EGOT"];
+    NSString *params = [[NSString alloc] initWithFormat:@"Password=EGOT"];
     [request setHTTPBody:[params dataUsingEncoding:NSUTF8StringEncoding]];
     
     NSURLConnection *connection = [[NSURLConnection alloc]initWithRequest:request delegate:self];
@@ -86,17 +86,23 @@
     
    
     
-    double ellapsedSeconds = [[NSDate date] timeIntervalSinceDate:self.start];
-    NSLog(@"ellapsed time:%f",ellapsedSeconds);
-    NSString *responseString = [NSString stringWithFormat:@"PingTime:%f sec",ellapsedSeconds];
-    [self.popUp setHidden:NO];
-    [self.responseLabel setText:responseString];
-   
+      
 }
 
 - (void)connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
-    NSLog(@"Connection did Receive Data");
+     NSLog(@"Connection did Receive Data");
+    
+    NSString *response =  [[NSString  alloc]initWithData:data encoding:NSUTF8StringEncoding] ;
+    
+    double ellapsedSeconds = [[NSDate date] timeIntervalSinceDate:self.start];
+    NSLog(@"ellapsed time:%f",ellapsedSeconds);
+    
+    NSString *responseString = [NSString stringWithFormat:@"Response: %@ PingTime:%f sec",response,ellapsedSeconds];
+    [self.popUp setHidden:NO];
+    [self.responseLabel setText:responseString];
+
+   
 }
 
 

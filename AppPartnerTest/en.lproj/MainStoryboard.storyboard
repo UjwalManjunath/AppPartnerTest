@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="S3p-zS-TbJ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pfc-4b-HGL">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-Pw-0dr"/>
@@ -67,7 +67,7 @@
                                     <imageView opaque="NO" userInteractionEnabled="NO" alpha="0.80000000000000004" contentMode="scaleToFill" image="logo.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="PSf-Ip-mFG">
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="71" id="dhn-hQ-xst"/>
+                                            <constraint firstAttribute="height" constant="60" id="ES0-qm-QgZ"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -77,9 +77,9 @@
                                     <constraint firstAttribute="trailing" secondItem="PSf-Ip-mFG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="29Y-rM-lu9"/>
                                     <constraint firstAttribute="bottom" secondItem="bg5-R4-Dpw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2bm-p2-35Z"/>
                                     <constraint firstItem="0EX-h0-0XF" firstAttribute="leading" secondItem="ocI-zn-QsL" secondAttribute="leading" type="default" id="7aP-as-r6D"/>
+                                    <constraint firstItem="PSf-Ip-mFG" firstAttribute="top" secondItem="oU1-ba-7q6" secondAttribute="top" constant="20" symbolic="YES" type="default" id="CfW-4Y-IFR"/>
                                     <constraint firstItem="fAb-no-3kP" firstAttribute="leading" secondItem="oU1-ba-7q6" secondAttribute="leading" type="default" id="Ihw-Uz-3Wh"/>
                                     <constraint firstItem="PSf-Ip-mFG" firstAttribute="leading" secondItem="oU1-ba-7q6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KYl-pZ-whz"/>
-                                    <constraint firstItem="PSf-Ip-mFG" firstAttribute="top" secondItem="oU1-ba-7q6" secondAttribute="top" constant="20" symbolic="YES" type="default" id="LeS-5t-BjV"/>
                                     <constraint firstItem="0EX-h0-0XF" firstAttribute="top" secondItem="ocI-zn-QsL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TGF-YX-aYt"/>
                                     <constraint firstItem="bg5-R4-Dpw" firstAttribute="leading" secondItem="0EX-h0-0XF" secondAttribute="leading" type="default" id="Vsj-9x-Lqd"/>
                                     <constraint firstItem="fAb-no-3kP" firstAttribute="bottom" secondItem="oU1-ba-7q6" secondAttribute="bottom" type="default" id="YAK-5I-HkH"/>
@@ -113,7 +113,7 @@
             <objects>
                 <viewController id="6Wr-UX-mqe" customClass="DancingAnimationVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKi-vD-M39">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="i5P-1A-BEA"/>
@@ -162,14 +162,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wj-J5-Ok3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="959" y="1132"/>
+            <point key="canvasLocation" x="847" y="1225"/>
         </scene>
         <!--Server PingVC - Server Ping-->
         <scene sceneID="TUs-X3-5TG">
             <objects>
                 <viewController id="agd-G3-ivm" customClass="ServerPingVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EO6-Qc-EI8">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="iSm-ja-uxG"/>
@@ -250,7 +250,7 @@
             <objects>
                 <viewController id="e5S-mh-cOA" customClass="FacebookFriendsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGG-gb-uLC">
-                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="AhT-La-u16"/>
@@ -273,6 +273,29 @@
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CAc-e0-wnY">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="facebookFriends" textLabel="SUn-Kv-JSx" detailTextLabel="y13-Kb-XEM" style="IBUITableViewCellStyleSubtitle" id="fZs-Au-4pO">
+                                                <rect key="frame" x="0.0" y="22" width="240" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUn-Kv-JSx">
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y13-Kb-XEM">
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </tableViewCell>
+                                        </prototypes>
                                     </tableView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -369,6 +392,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
 </document>
