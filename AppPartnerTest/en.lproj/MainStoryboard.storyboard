@@ -9,7 +9,7 @@
             <objects>
                 <viewController id="S3p-zS-TbJ" customClass="MenuViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Pfc-4b-HGL">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="vjP-Pw-0dr"/>
@@ -77,10 +77,10 @@
                                     <constraint firstAttribute="trailing" secondItem="PSf-Ip-mFG" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="29Y-rM-lu9"/>
                                     <constraint firstAttribute="bottom" secondItem="bg5-R4-Dpw" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="2bm-p2-35Z"/>
                                     <constraint firstItem="0EX-h0-0XF" firstAttribute="leading" secondItem="ocI-zn-QsL" secondAttribute="leading" type="default" id="7aP-as-r6D"/>
-                                    <constraint firstItem="PSf-Ip-mFG" firstAttribute="top" secondItem="oU1-ba-7q6" secondAttribute="top" constant="20" symbolic="YES" type="default" id="CfW-4Y-IFR"/>
                                     <constraint firstItem="fAb-no-3kP" firstAttribute="leading" secondItem="oU1-ba-7q6" secondAttribute="leading" type="default" id="Ihw-Uz-3Wh"/>
                                     <constraint firstItem="PSf-Ip-mFG" firstAttribute="leading" secondItem="oU1-ba-7q6" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="KYl-pZ-whz"/>
                                     <constraint firstItem="0EX-h0-0XF" firstAttribute="top" secondItem="ocI-zn-QsL" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="TGF-YX-aYt"/>
+                                    <constraint firstItem="PSf-Ip-mFG" firstAttribute="top" secondItem="oU1-ba-7q6" secondAttribute="top" constant="69" id="V6x-q0-G20"/>
                                     <constraint firstItem="bg5-R4-Dpw" firstAttribute="leading" secondItem="0EX-h0-0XF" secondAttribute="leading" type="default" id="Vsj-9x-Lqd"/>
                                     <constraint firstItem="fAb-no-3kP" firstAttribute="bottom" secondItem="oU1-ba-7q6" secondAttribute="bottom" type="default" id="YAK-5I-HkH"/>
                                     <constraint firstItem="bg5-R4-Dpw" firstAttribute="top" secondItem="0EX-h0-0XF" secondAttribute="bottom" constant="8" symbolic="YES" type="default" id="aZ1-F6-THC"/>
@@ -114,7 +114,7 @@
             <objects>
                 <viewController id="6Wr-UX-mqe" customClass="DancingAnimationVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qKi-vD-M39">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="i5P-1A-BEA"/>
@@ -124,7 +124,7 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UOo-yH-rgm">
                                         <constraints>
                                             <constraint firstAttribute="height" constant="44" id="7Za-Sv-W1b"/>
-                                            <constraint firstAttribute="width" constant="250" id="SHA-LR-3Qs"/>
+                                            <constraint firstAttribute="width" constant="250" id="Orm-JK-WXs"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                         <state key="normal" title="Button" image="button_dance_off.png">
@@ -136,15 +136,31 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="Super Paper Mario.png" translatesAutoresizingMaskIntoConstraints="NO" id="OtV-1m-LTy">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="cPa-H9-pq2"/>
+                                            <constraint firstAttribute="height" constant="100" id="jr3-m8-Dih"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="super_paper_mario_-_luigi_2.png" translatesAutoresizingMaskIntoConstraints="NO" id="LJP-Xp-akd">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="Lha-KB-sJI"/>
+                                        </constraints>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="UOo-yH-rgm" firstAttribute="centerX" secondItem="NZz-pB-lj5" secondAttribute="centerX" type="default" id="1A1-ve-oOV"/>
+                                    <constraint firstItem="LJP-Xp-akd" firstAttribute="top" secondItem="OtV-1m-LTy" secondAttribute="top" type="default" id="44g-Dn-J6l"/>
                                     <constraint firstItem="NZz-pB-lj5" firstAttribute="trailing" secondItem="bpD-Mg-KSK" secondAttribute="trailing" type="default" id="A5n-eR-bCY"/>
+                                    <constraint firstItem="OtV-1m-LTy" firstAttribute="leading" secondItem="bpD-Mg-KSK" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="FMo-cy-Tmw"/>
+                                    <constraint firstItem="UOo-yH-rgm" firstAttribute="centerX" secondItem="NZz-pB-lj5" secondAttribute="centerX" type="default" id="H4A-pH-e0m"/>
                                     <constraint firstItem="NZz-pB-lj5" firstAttribute="leading" secondItem="bpD-Mg-KSK" secondAttribute="leading" type="default" id="PKI-zq-sYV"/>
                                     <constraint firstAttribute="bottom" secondItem="UOo-yH-rgm" secondAttribute="bottom" constant="20" symbolic="YES" type="default" id="QbF-tB-bf0"/>
                                     <constraint firstItem="NZz-pB-lj5" firstAttribute="top" secondItem="bpD-Mg-KSK" secondAttribute="top" type="default" id="bVn-L4-XTG"/>
+                                    <constraint firstItem="LJP-Xp-akd" firstAttribute="bottom" secondItem="OtV-1m-LTy" secondAttribute="bottom" type="default" id="d4t-YA-jqh"/>
+                                    <constraint firstAttribute="trailing" secondItem="LJP-Xp-akd" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="f08-EL-Wf7"/>
                                     <constraint firstItem="NZz-pB-lj5" firstAttribute="bottom" secondItem="bpD-Mg-KSK" secondAttribute="bottom" type="default" id="pvm-gO-GZa"/>
+                                    <constraint firstAttribute="bottom" secondItem="LJP-Xp-akd" secondAttribute="bottom" constant="78" id="rcI-ud-p3e"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -162,14 +178,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wj-J5-Ok3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="847" y="1225"/>
+            <point key="canvasLocation" x="688" y="1271"/>
         </scene>
         <!--Server PingVC - Server Ping-->
         <scene sceneID="TUs-X3-5TG">
             <objects>
                 <viewController id="agd-G3-ivm" customClass="ServerPingVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="EO6-Qc-EI8">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="iSm-ja-uxG"/>
@@ -251,7 +267,7 @@
             <objects>
                 <viewController id="e5S-mh-cOA" customClass="FacebookFriendsVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KGG-gb-uLC">
-                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" image="background_apppartner.png" translatesAutoresizingMaskIntoConstraints="NO" id="AhT-La-u16"/>
@@ -360,7 +376,7 @@
             <objects>
                 <navigationController id="TKo-Zs-Qan" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="blackTranslucent" id="nTA-El-JWj">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="nTA-El-JWj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -379,6 +395,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Super Paper Mario.png" width="256" height="256"/>
         <image name="background_apppartner.png" width="320" height="568"/>
         <image name="button_dance_off.png" width="278" height="45"/>
         <image name="button_dance_on.png" width="278" height="45"/>
@@ -395,6 +412,7 @@
         <image name="frame_buttons.png" width="301" height="366"/>
         <image name="frame_popup.png" width="271" height="109"/>
         <image name="logo.jpg" width="310" height="84"/>
+        <image name="super_paper_mario_-_luigi_2.png" width="256" height="256"/>
     </resources>
     <classes>
         <class className="DancingAnimationVC" superclassName="UIViewController">

@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D6041071769BA9F008DBD5C /* Super Paper Mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D6041061769BA9F008DBD5C /* Super Paper Mario.png */; };
+		2D60410D1769C314008DBD5C /* super_paper_mario_-_luigi_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D60410C1769C314008DBD5C /* super_paper_mario_-_luigi_2.png */; };
 		2D7652C017681F3D005BC401 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7652BF17681F3D005BC401 /* UIKit.framework */; };
 		2D7652C217681F3D005BC401 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7652C117681F3D005BC401 /* Foundation.framework */; };
 		2D7652C417681F3D005BC401 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7652C317681F3D005BC401 /* CoreGraphics.framework */; };
@@ -66,6 +68,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D6041061769BA9F008DBD5C /* Super Paper Mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Super Paper Mario.png"; sourceTree = "<group>"; };
+		2D60410C1769C314008DBD5C /* super_paper_mario_-_luigi_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "super_paper_mario_-_luigi_2.png"; sourceTree = "<group>"; };
 		2D7652BC17681F3D005BC401 /* AppPartnerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPartnerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D7652BF17681F3D005BC401 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		2D7652C117681F3D005BC401 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -226,6 +230,8 @@
 		2D76533117685D4F005BC401 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2D60410C1769C314008DBD5C /* super_paper_mario_-_luigi_2.png */,
+				2D6041061769BA9F008DBD5C /* Super Paper Mario.png */,
 				2D9C967D176929FA00DBADAA /* icon_facebook_portrait.png */,
 				2D9C967E176929FA00DBADAA /* icon_facebook_portrait@2x.png */,
 				2D7653321768606B005BC401 /* frame_popup.png */,
@@ -355,6 +361,8 @@
 				2D9C967A1769044700DBADAA /* FacebookSDKResources.bundle in Resources */,
 				2D9C967F176929FA00DBADAA /* icon_facebook_portrait.png in Resources */,
 				2D9C9680176929FA00DBADAA /* icon_facebook_portrait@2x.png in Resources */,
+				2D6041071769BA9F008DBD5C /* Super Paper Mario.png in Resources */,
+				2D60410D1769C314008DBD5C /* super_paper_mario_-_luigi_2.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
