@@ -185,8 +185,10 @@
 
 
 - (IBAction)ReloadButtonPressed:(UIButton *)sender {
+      
     if (!FBSession.activeSession.isOpen) {
         // if the session is closed, then we open it here, and establish a handler for state changes
+        [FBSession.activeSession closeAndClearTokenInformation];
         [FBSession openActiveSessionWithReadPermissions:nil
                                            allowLoginUI:YES
                                       completionHandler:^(FBSession *session,
