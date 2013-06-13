@@ -53,6 +53,16 @@
 		2D76533017683158005BC401 /* button_dance_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D76532C17683158005BC401 /* button_dance_on@2x.png */; };
 		2D7653341768606B005BC401 /* frame_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7653321768606B005BC401 /* frame_popup.png */; };
 		2D7653351768606B005BC401 /* frame_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7653331768606B005BC401 /* frame_popup@2x.png */; };
+		2D9C96701769031B00DBADAA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966B1769031B00DBADAA /* Accounts.framework */; };
+		2D9C96711769031B00DBADAA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966C1769031B00DBADAA /* AdSupport.framework */; };
+		2D9C96721769031B00DBADAA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966D1769031B00DBADAA /* libsqlite3.dylib */; };
+		2D9C96731769031B00DBADAA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966E1769031B00DBADAA /* Security.framework */; };
+		2D9C96741769031B00DBADAA /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966F1769031B00DBADAA /* Social.framework */; };
+		2D9C967A1769044700DBADAA /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2D9C96791769044700DBADAA /* FacebookSDKResources.bundle */; };
+		2D9C967C1769045400DBADAA /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C967B1769045400DBADAA /* FacebookSDK.framework */; };
+		2D9C967F176929FA00DBADAA /* icon_facebook_portrait.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D9C967D176929FA00DBADAA /* icon_facebook_portrait.png */; };
+		2D9C9680176929FA00DBADAA /* icon_facebook_portrait@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D9C967E176929FA00DBADAA /* icon_facebook_portrait@2x.png */; };
+		2D9C968317696D4E00DBADAA /* facebookFriendCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2D9C968217696D4E00DBADAA /* facebookFriendCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -110,6 +120,17 @@
 		2D76532C17683158005BC401 /* button_dance_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_dance_on@2x.png"; sourceTree = "<group>"; };
 		2D7653321768606B005BC401 /* frame_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_popup.png; sourceTree = "<group>"; };
 		2D7653331768606B005BC401 /* frame_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frame_popup@2x.png"; sourceTree = "<group>"; };
+		2D9C966B1769031B00DBADAA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		2D9C966C1769031B00DBADAA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		2D9C966D1769031B00DBADAA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		2D9C966E1769031B00DBADAA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		2D9C966F1769031B00DBADAA /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		2D9C96791769044700DBADAA /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		2D9C967B1769045400DBADAA /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		2D9C967D176929FA00DBADAA /* icon_facebook_portrait.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_facebook_portrait.png; sourceTree = "<group>"; };
+		2D9C967E176929FA00DBADAA /* icon_facebook_portrait@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_facebook_portrait@2x.png"; sourceTree = "<group>"; };
+		2D9C968117696D4E00DBADAA /* facebookFriendCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = facebookFriendCell.h; sourceTree = "<group>"; };
+		2D9C968217696D4E00DBADAA /* facebookFriendCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = facebookFriendCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +138,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D9C967C1769045400DBADAA /* FacebookSDK.framework in Frameworks */,
+				2D9C96701769031B00DBADAA /* Accounts.framework in Frameworks */,
+				2D9C96711769031B00DBADAA /* AdSupport.framework in Frameworks */,
+				2D9C96721769031B00DBADAA /* libsqlite3.dylib in Frameworks */,
+				2D9C96731769031B00DBADAA /* Security.framework in Frameworks */,
+				2D9C96741769031B00DBADAA /* Social.framework in Frameworks */,
 				2D7652C017681F3D005BC401 /* UIKit.framework in Frameworks */,
 				2D7652C217681F3D005BC401 /* Foundation.framework in Frameworks */,
 				2D7652C417681F3D005BC401 /* CoreGraphics.framework in Frameworks */,
@@ -146,6 +173,13 @@
 		2D7652BE17681F3D005BC401 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D9C967B1769045400DBADAA /* FacebookSDK.framework */,
+				2D9C96791769044700DBADAA /* FacebookSDKResources.bundle */,
+				2D9C966B1769031B00DBADAA /* Accounts.framework */,
+				2D9C966C1769031B00DBADAA /* AdSupport.framework */,
+				2D9C966D1769031B00DBADAA /* libsqlite3.dylib */,
+				2D9C966E1769031B00DBADAA /* Security.framework */,
+				2D9C966F1769031B00DBADAA /* Social.framework */,
 				2D7652BF17681F3D005BC401 /* UIKit.framework */,
 				2D7652C117681F3D005BC401 /* Foundation.framework */,
 				2D7652C317681F3D005BC401 /* CoreGraphics.framework */,
@@ -157,6 +191,8 @@
 			isa = PBXGroup;
 			children = (
 				2D7652D717681F3D005BC401 /* MainStoryboard.storyboard */,
+				2D9C968117696D4E00DBADAA /* facebookFriendCell.h */,
+				2D9C968217696D4E00DBADAA /* facebookFriendCell.m */,
 				2D7653181768302F005BC401 /* DancingAnimationVC.h */,
 				2D7653191768302F005BC401 /* DancingAnimationVC.m */,
 				2D76531B17683042005BC401 /* ServerPingVC.h */,
@@ -190,6 +226,8 @@
 		2D76533117685D4F005BC401 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				2D9C967D176929FA00DBADAA /* icon_facebook_portrait.png */,
+				2D9C967E176929FA00DBADAA /* icon_facebook_portrait@2x.png */,
 				2D7653321768606B005BC401 /* frame_popup.png */,
 				2D7653331768606B005BC401 /* frame_popup@2x.png */,
 				2D76531417682D43005BC401 /* logo.jpg */,
@@ -314,6 +352,9 @@
 				2D76533017683158005BC401 /* button_dance_on@2x.png in Resources */,
 				2D7653341768606B005BC401 /* frame_popup.png in Resources */,
 				2D7653351768606B005BC401 /* frame_popup@2x.png in Resources */,
+				2D9C967A1769044700DBADAA /* FacebookSDKResources.bundle in Resources */,
+				2D9C967F176929FA00DBADAA /* icon_facebook_portrait.png in Resources */,
+				2D9C9680176929FA00DBADAA /* icon_facebook_portrait@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +371,7 @@
 				2D76531A1768302F005BC401 /* DancingAnimationVC.m in Sources */,
 				2D76531D17683042005BC401 /* ServerPingVC.m in Sources */,
 				2D76532017683056005BC401 /* FacebookFriendsVC.m in Sources */,
+				2D9C968317696D4E00DBADAA /* facebookFriendCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +456,12 @@
 		2D7652E017681F3D005BC401 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AppPartnerTest\"",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppPartnerTest/AppPartnerTest-Prefix.pch";
 				INFOPLIST_FILE = "AppPartnerTest/AppPartnerTest-Info.plist";
@@ -425,6 +473,12 @@
 		2D7652E117681F3D005BC401 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/AppPartnerTest\"",
+					"\"$(SRCROOT)/../../Documents/FacebookSDK\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "AppPartnerTest/AppPartnerTest-Prefix.pch";
 				INFOPLIST_FILE = "AppPartnerTest/AppPartnerTest-Info.plist";

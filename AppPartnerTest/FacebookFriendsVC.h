@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <FacebookSDK/FacebookSDK.h> 
 
-@interface FacebookFriendsVC : UIViewController
+@interface FacebookFriendsVC : UIViewController<FBFriendPickerDelegate,UITableViewDelegate,UITableViewDataSource>
+
+- (IBAction)ReloadButtonPressed:(UIButton *)sender ;
 
 @end

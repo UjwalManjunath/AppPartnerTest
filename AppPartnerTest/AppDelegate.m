@@ -7,8 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "FacebookFriendsVC.h"
 
 @implementation AppDelegate
+
+
+// FBSample logic
+// In the login workflow, the Facebook native application, or Safari will transition back to
+// this applicaiton via a url following the scheme fb[app id]://; the call to handleOpenURL
+// below captures the token, in the case of success, on behalf of the FBSession object
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    return [FBAppCall handleOpenURL:url sourceApplication:sourceApplication];
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
