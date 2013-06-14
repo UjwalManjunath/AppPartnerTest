@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *luigi;
 @property (weak, nonatomic) IBOutlet UIImageView *mario;
 @property(nonatomic,strong) AVAudioPlayer *player;
+@property (weak, nonatomic) IBOutlet UIButton *danceButton;
 
 @end
 
@@ -85,6 +86,7 @@
         // may be add an alert;
     }
     [self stopTimer];
+    self.danceButton.selected = ! self.danceButton.isSelected;
 }
 
 - (void)viewDidLoad
