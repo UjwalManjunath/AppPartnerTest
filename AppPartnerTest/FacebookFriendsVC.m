@@ -22,7 +22,6 @@
 
 @implementation FacebookFriendsVC
 
-
 -(NSOperationQueue *)imageLoadingOperationQueue
 {
     if(!_imageLoadingOperationQueue)
@@ -50,7 +49,6 @@
 {
     if(!_photos){
         _photos = [[NSMutableArray alloc]init];
-        
     }
     return _photos;
 }
@@ -61,11 +59,9 @@
     [self loginInToFacebook];
 }
 
--(void)viewWillAppear:(BOOL)animated
+- (void)viewDidDisappear:(BOOL)animated
 {
-    [super viewWillAppear:animated];
-  
-   
+    [self.imageLoadingOperationQueue cancelAllOperations];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
@@ -73,9 +69,8 @@
     return [self.fbFriendsList count];
 }
 
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     NSArray *facebookFriends = [self.fbFriendsList allKeys];
     facebookFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"friendViewCell" forIndexPath:indexPath];
     cell.nameLabel.text = [self.fbFriendsList valueForKey:[facebookFriends objectAtIndex:indexPath.row]];
@@ -114,8 +109,8 @@
     return cell;
 }
 
-
-- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
+- (void)tableView:(UITableView *)tableView didEndDisplayingCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
    // FacebookFriend *friend = [self.facebookFriends objectAtIndex:indexPath.row];
     NSArray *facebookFriends = [self.fbFriendsList allKeys];
     //Fetch operation that doesn't need executing anymore
@@ -127,13 +122,6 @@
     }
 }
 
-- (void)viewDidDisappear:(BOOL)animated {
-    [self.imageLoadingOperationQueue cancelAllOperations];
-}
-
-///
-///Function to Login to Facebook using SDK
-///
 -(void)loginInToFacebook
 {
     if (!FBSession.activeSession.isOpen) {
@@ -168,6 +156,7 @@
     
 
 }
+
 -(void)LoadFriendsList
 {    
     FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends"];
