@@ -10,7 +10,4 @@
 
 @interface ServerPingVC : UIViewController
 
-
-
-
 @end

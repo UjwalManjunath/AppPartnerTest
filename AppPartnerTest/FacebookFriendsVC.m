@@ -22,6 +22,12 @@
 
 @implementation FacebookFriendsVC
 
+#define GRAPH_PATH @"me/friends"
+#define PIC_URL @"https://graph.facebook.com/%@/picture"
+#define KEY @"data"
+#define CELL_IDENTIFIER @"friendViewCell"
+#define DEFAULT_PIC @"icon_facebook_portrait.png"
+
 -(NSOperationQueue *)imageLoadingOperationQueue
 {
     if(!_imageLoadingOperationQueue)
@@ -72,9 +78,9 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSArray *facebookFriends = [self.fbFriendsList allKeys];
-    facebookFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"friendViewCell" forIndexPath:indexPath];
+    facebookFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:CELL_IDENTIFIER forIndexPath:indexPath];
     cell.nameLabel.text = [self.fbFriendsList valueForKey:[facebookFriends objectAtIndex:indexPath.row]];
-    cell.profileImage.image = [UIImage imageNamed:@"icon_facebook_portrait.png"];
+    cell.profileImage.image = [UIImage imageNamed:DEFAULT_PIC];
         //Create a block operation for loading the image into the profile image view
     NSBlockOperation *loadImageIntoCellOp = [[NSBlockOperation alloc] init];
         //Define weak operation so that operation can be referenced from within the block without creating a retain cycle
@@ -157,11 +163,11 @@
 
 -(void)LoadFriendsList
 {    
-    FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends"];
+    FBRequest *friendRequest = [FBRequest requestForGraphPath:GRAPH_PATH];
     [friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-        NSArray *data = [result objectForKey:@"data"];
+        NSArray *data = [result objectForKey:KEY];
         for (FBGraphObject<FBGraphUser> *friend in data) {
-            [self.fbFriendsList setObject:[friend name] forKey:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[friend id]]];
+            [self.fbFriendsList setObject:[friend name] forKey:[NSString stringWithFormat:PIC_URL,[friend id]]];
         }
         [self.friendsListView reloadData];
     }];

@@ -9,22 +9,24 @@
 #import "DancingAnimationVC.h"
 
 @interface DancingAnimationVC ()
+
 @property (nonatomic, weak) NSTimer *timer;
 @property (weak, nonatomic) IBOutlet UIView *danceFloor;
 @property (weak, nonatomic) IBOutlet UIImageView *luigi;
 @property (weak, nonatomic) IBOutlet UIImageView *mario;
 @property(nonatomic,strong) AVAudioPlayer *player;
+
 @end
 
-
-
 @implementation DancingAnimationVC
+
+#define MP3FILE @"marioDance"
+#define FILE_TYPE @"mp3"
 
 -(void)startTimer
 {
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(marioLuigiDance:) userInfo:nil repeats:YES];
 }
-
 
 -(void)stopTimer
 {
@@ -46,13 +48,8 @@
 {
     [UIView animateWithDuration:0.5 delay:0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
         
-        
-            
-            [self setRandomLocation:self.mario];
-             [self setRandomLocation:self.luigi];
-        
-        
-        
+        [self setRandomLocation:self.mario];
+        [self setRandomLocation:self.luigi];
         
     }completion:^(BOOL finished){
         
@@ -63,29 +60,15 @@
                 [self setRandomLocation:self.mario];
                 [self setRandomLocation:self.luigi];
                 
-                
-                
             }completion:^(BOOL fin){
-                
             }];
         }
     }];
-    
-    
 }
 
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+- (IBAction)danceMarioDance:(UIButton *)sender
 {
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
-
-- (IBAction)danceMarioDance:(UIButton *)sender {
+    sender.selected = !sender.isSelected;
     if(![self.player isPlaying]){
         [self.player play];
         [self startTimer];
@@ -113,25 +96,18 @@
 
 -(void)loadMp3File
 {
-    NSString *marioMp3 = [[NSBundle mainBundle]pathForResource:@"marioDance" ofType:@"mp3"];
+    NSString *marioMp3 = [[NSBundle mainBundle]pathForResource:MP3FILE ofType:FILE_TYPE];
     self.player=[[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:marioMp3 ] error:nil];
     [self.player setDelegate:self];
 }
 
--(void)setRandomLocation:(UIView *)view{
-    
+-(void)setRandomLocation:(UIView *)view
+{
     //[view sizeToFit];
     CGRect ViewBounds = CGRectInset(self.danceFloor.bounds, view.frame.size.width/2, view.frame.size.height/2);
     CGFloat x = arc4random() % (int)ViewBounds.size.width + view.frame.size.width/2;
     CGFloat y = arc4random() % (int)ViewBounds.size.height + view.frame.size.height/2;
     view.center= CGPointMake(x,y );
-    
-}
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 @end
