@@ -11,7 +11,6 @@
 
 
 @interface FacebookFriendsVC ()
-@property (weak, nonatomic) IBOutlet UITableViewCell *fbCell;
 
 @property (weak, nonatomic) IBOutlet UITableView *friendsListView;
 @property(strong,nonatomic) NSMutableDictionary *fbFriendsList;
@@ -22,7 +21,8 @@
 @end
 
 @implementation FacebookFriendsVC
-@synthesize photos=_photos;
+
+
 -(NSOperationQueue *)imageLoadingOperationQueue
 {
     if(!_imageLoadingOperationQueue)
@@ -55,25 +55,10 @@
     return _photos;
 }
 
--(void)setPhotos:(NSMutableArray *)photos
-{
-    _photos = photos;
-    [self.friendsListView reloadData];
-}
-
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    [self loginInToFacebook];
 }
 
 -(void)viewWillAppear:(BOOL)animated
@@ -89,79 +74,43 @@
 }
 
 
-/*
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"friendViewCell"];
-    NSArray *allKeys = [self.fbFriendsList allKeys];
-    dispatch_queue_t loaderQ = dispatch_queue_create("imageloader", NULL);
-    
-    
-    dispatch_async(loaderQ, ^{
-        UIImage *image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:allKeys[indexPath.row]]]];
-        
-        dispatch_async(dispatch_get_main_queue(), ^{
-            cell.textLabel.text = [self.fbFriendsList valueForKey:[allKeys objectAtIndex:indexPath.row]];
-            //   NSString *urlString =
-            cell.imageView.image = image;
-            //[self.photos objectAtIndex:indexPath.row];
-
-          
-        });
-    });
-
-    
-    
-    
-      
-    
-   
-    
-    return cell;
-}*/
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-     NSArray *facebookFriends = [self.fbFriendsList allKeys];
-//FacebookFriend *friend =
-//FacebookFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:FB_CELL_IDENTIFIER forIndexPath:indexPath];
+    NSArray *facebookFriends = [self.fbFriendsList allKeys];
     facebookFriendCell *cell = [tableView dequeueReusableCellWithIdentifier:@"friendViewCell" forIndexPath:indexPath];
     cell.nameLabel.text = [self.fbFriendsList valueForKey:[facebookFriends objectAtIndex:indexPath.row]];
-    
-//Create a block operation for loading the image into the profile image view
-        NSBlockOperation *loadImageIntoCellOp = [[NSBlockOperation alloc] init];
-//Define weak operation so that operation can be referenced from within the block without creating a retain cycle
+    cell.profileImage.image = [UIImage imageNamed:@"icon_facebook_portrait.png"];
+        //Create a block operation for loading the image into the profile image view
+    NSBlockOperation *loadImageIntoCellOp = [[NSBlockOperation alloc] init];
+        //Define weak operation so that operation can be referenced from within the block without creating a retain cycle
     __weak NSBlockOperation *weakOp = loadImageIntoCellOp;
-
+    
     [loadImageIntoCellOp addExecutionBlock:^(void){
-        //Some asynchronous work. Once the image is ready, it will load into view on the main queue
+            //Some asynchronous work. Once the image is ready, it will load into view on the main queue
         UIImage *profileImage = [UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:facebookFriends[indexPath.row]]]];
-        
         [[NSOperationQueue mainQueue] addOperationWithBlock:^(void) {
-            //Check for cancelation before proceeding. We use cellForRowAtIndexPath to make sure we get nil for a non-visible cell
+                //Check for cancelation before proceeding. We use cellForRowAtIndexPath to make sure we get nil for a non-visible cell
             if (!weakOp.isCancelled) {
                facebookFriendCell *theCell = (facebookFriendCell *)[tableView cellForRowAtIndexPath:indexPath];
                 theCell.profileImage.image = profileImage;
-                
                 [self.facebookUidToImageDownloadOperations removeObjectForKey:[self.fbFriendsList valueForKey:[facebookFriends objectAtIndex:indexPath.row]]];
             }
         }];
     }];
     
-//Save a reference to the operation in an NSMutableDictionary so that it can be cancelled later on
+    //Save a reference to the operation in an NSMutableDictionary so that it can be cancelled later on
     if (facebookFriends[indexPath.row]) {
         [self.facebookUidToImageDownloadOperations setObject:loadImageIntoCellOp forKey:[self.fbFriendsList valueForKey:[facebookFriends objectAtIndex:indexPath.row]]];
     }
     
-//Add the operation to the designated background queue
+        //Add the operation to the designated background queue
     if (loadImageIntoCellOp) {
         [self.imageLoadingOperationQueue addOperation:loadImageIntoCellOp];
     }
     
-//Make sure cell doesn't contain any traces of data from reuse -
-//This would be a good place to assign a placeholder image
-   cell.imageView.image = nil;
-    
+        //Make sure cell doesn't contain any traces of data from reuse -
+        //This would be a good place to assign a placeholder image
+    cell.imageView.image = nil;
     return cell;
 }
 
@@ -182,18 +131,17 @@
     [self.imageLoadingOperationQueue cancelAllOperations];
 }
 
-
-
-- (IBAction)ReloadButtonPressed:(UIButton *)sender {
-      
+///
+///Function to Login to Facebook using SDK
+///
+-(void)loginInToFacebook
+{
     if (!FBSession.activeSession.isOpen) {
         // if the session is closed, then we open it here, and establish a handler for state changes
         [FBSession.activeSession closeAndClearTokenInformation];
         [FBSession openActiveSessionWithReadPermissions:nil
                                            allowLoginUI:YES
-                                      completionHandler:^(FBSession *session,
-                                                          FBSessionState state,
-                                                          NSError *error) {
+                                      completionHandler:^(FBSession *session,FBSessionState state,NSError *error) {
                                           if (error) {
                                               UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                                                   message:error.localizedDescription
@@ -203,43 +151,33 @@
                                               [alertView show];
                                           }
                                           else if(session.isOpen){
-                                             [self ReloadButtonPressed:sender];
+                                              [self loginInToFacebook];
                                           }
                                           
                                       }];
         return;
     }
-   
- 
-[self LoadFriendsList];
-
-   }
-
-
-
--(void)LoadFriendsList
-{
-    
-    FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends"];
-    [ friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
-       NSArray *data = [result objectForKey:@"data"];
-        for (FBGraphObject<FBGraphUser> *friend in data) {
-            [self.fbFriendsList setObject:[friend name] forKey:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[friend id]]];
-      //      NSLog(@"%@",friend);
-        }
-        [self.friendsListView reloadData];
-        }];
-   
+    [self LoadFriendsList];
 }
 
-+(NSArray *)getUserImages:(NSArray *)urlList
-{
-    NSMutableArray *photos = [[NSMutableArray alloc]init];
-    for(NSString *urlString in urlList){
-        [photos addObject:[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:urlString]]]];
-    }
-    return [photos copy];
+- (IBAction)ReloadButtonPressed:(UIButton *)sender {
+    if(!FBSession.activeSession.isOpen)
+       [self loginInToFacebook ];
+    else
+        [self LoadFriendsList];
     
+
+}
+-(void)LoadFriendsList
+{    
+    FBRequest *friendRequest = [FBRequest requestForGraphPath:@"me/friends"];
+    [friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
+        NSArray *data = [result objectForKey:@"data"];
+        for (FBGraphObject<FBGraphUser> *friend in data) {
+            [self.fbFriendsList setObject:[friend name] forKey:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture",[friend id]]];
+        }
+        [self.friendsListView reloadData];
+    }];
 }
 
 @end

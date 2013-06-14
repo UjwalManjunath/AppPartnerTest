@@ -181,7 +181,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4wj-J5-Ok3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="688" y="1271"/>
+            <point key="canvasLocation" x="1176" y="1343"/>
         </scene>
         <!--Server PingVC - Server Ping-->
         <scene sceneID="TUs-X3-5TG">
@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QaY-V9-Xy3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="752" y="626"/>
+            <point key="canvasLocation" x="1664" y="650"/>
         </scene>
         <!--Facebook FriendsVC - Facebook-->
         <scene sceneID="roW-6k-ldO">
@@ -291,7 +291,7 @@
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="ReloadButtonPressed:" destination="e5S-mh-cOA" eventType="touchUpInside" id="IAZ-uk-0qx"/>
+                                            <action selector="ReloadButtonPressed:" destination="e5S-mh-cOA" eventType="touchUpInside" id="uIJ-Y9-qFN"/>
                                         </connections>
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Dd-gG-urW">
@@ -431,7 +431,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/FacebookFriendsVC.h"/>
             <relationships>
                 <relationship kind="action" name="ReloadButtonPressed:" candidateClass="UIButton"/>
-                <relationship kind="outlet" name="fbCell" candidateClass="UITableViewCell"/>
                 <relationship kind="outlet" name="friendsListView" candidateClass="UITableView"/>
             </relationships>
         </class>
@@ -444,6 +443,7 @@
         <class className="ServerPingVC" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/ServerPingVC.h"/>
             <relationships>
+                <relationship kind="action" name="pingServer:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="popUp" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="responseLabel" candidateClass="UILabel"/>
             </relationships>

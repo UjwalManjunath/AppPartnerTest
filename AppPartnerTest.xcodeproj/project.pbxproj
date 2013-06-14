@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2D40B861176AAD550009AA21 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D40B860176AAD550009AA21 /* icon.png */; };
+		2D40B863176AAD8A0009AA21 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D40B862176AAD8A0009AA21 /* icon@2x.png */; };
 		2D6041071769BA9F008DBD5C /* Super Paper Mario.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D6041061769BA9F008DBD5C /* Super Paper Mario.png */; };
 		2D60410D1769C314008DBD5C /* super_paper_mario_-_luigi_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D60410C1769C314008DBD5C /* super_paper_mario_-_luigi_2.png */; };
 		2D7652C017681F3D005BC401 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D7652BF17681F3D005BC401 /* UIKit.framework */; };
@@ -70,6 +72,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2D40B860176AAD550009AA21 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		2D40B862176AAD8A0009AA21 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		2D6041061769BA9F008DBD5C /* Super Paper Mario.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Super Paper Mario.png"; sourceTree = "<group>"; };
 		2D60410C1769C314008DBD5C /* super_paper_mario_-_luigi_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "super_paper_mario_-_luigi_2.png"; sourceTree = "<group>"; };
 		2D7652BC17681F3D005BC401 /* AppPartnerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AppPartnerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +223,8 @@
 		2D7652C617681F3D005BC401 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D40B862176AAD8A0009AA21 /* icon@2x.png */,
+				2D40B860176AAD550009AA21 /* icon.png */,
 				2D958EEC176A96880051DFFC /* marioDance.mp3 */,
 				2D76533117685D4F005BC401 /* images */,
 				2D7652E8176821AA005BC401 /* Default.png */,
@@ -371,6 +377,8 @@
 				2D6041071769BA9F008DBD5C /* Super Paper Mario.png in Resources */,
 				2D60410D1769C314008DBD5C /* super_paper_mario_-_luigi_2.png in Resources */,
 				2D958EED176A96880051DFFC /* marioDance.mp3 in Resources */,
+				2D40B861176AAD550009AA21 /* icon.png in Resources */,
+				2D40B863176AAD8A0009AA21 /* icon@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
