@@ -153,8 +153,6 @@
        [self loginInToFacebook ];
     else
         [self LoadFriendsList];
-    
-
 }
 
 -(void)LoadFriendsList
