@@ -296,6 +296,11 @@
                                     </button>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="3Dd-gG-urW">
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <activityIndicatorView key="tableFooterView" opaque="NO" contentMode="scaleToFill" hidesWhenStopped="YES" animating="YES" style="gray" id="2pk-MY-wYe">
+                                            <rect key="frame" x="0.0" y="66" width="240" height="20"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="color" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </activityIndicatorView>
                                         <prototypes>
                                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="friendViewCell" id="3w4-dN-FIw" customClass="facebookFriendCell">
                                                 <rect key="frame" x="0.0" y="22" width="240" height="44"/>
@@ -368,6 +373,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="friendsListView" destination="3Dd-gG-urW" id="K8U-Xw-MMc"/>
+                        <outlet property="spinner" destination="2pk-MY-wYe" id="sDA-Ju-jzP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vYf-65-fpV" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -432,6 +438,7 @@
             <relationships>
                 <relationship kind="action" name="ReloadButtonPressed:" candidateClass="UIButton"/>
                 <relationship kind="outlet" name="friendsListView" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="spinner" candidateClass="UIActivityIndicatorView"/>
             </relationships>
         </class>
         <class className="MenuViewController" superclassName="UIViewController">

@@ -17,6 +17,7 @@
 @property(strong,nonatomic) NSMutableArray *photos;
 @property(strong,nonatomic) NSMutableDictionary *facebookUidToImageDownloadOperations;
 @property (strong,nonatomic) NSOperationQueue *imageLoadingOperationQueue ;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *spinner;
 
 @end
 
@@ -164,13 +165,17 @@
 -(void)LoadFriendsList
 {    
     FBRequest *friendRequest = [FBRequest requestForGraphPath:GRAPH_PATH];
+    [self.spinner startAnimating];
     [friendRequest startWithCompletionHandler:^(FBRequestConnection *connection, id result, NSError *error) {
         NSArray *data = [result objectForKey:KEY];
         for (FBGraphObject<FBGraphUser> *friend in data) {
             [self.fbFriendsList setObject:[friend name] forKey:[NSString stringWithFormat:PIC_URL,[friend id]]];
         }
-        [self.friendsListView reloadData];
+       [self.friendsListView reloadData];
+         [self.spinner stopAnimating];
     }];
+     
+    
 }
 
 @end
