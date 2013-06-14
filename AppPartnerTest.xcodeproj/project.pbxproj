@@ -55,6 +55,8 @@
 		2D76533017683158005BC401 /* button_dance_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D76532C17683158005BC401 /* button_dance_on@2x.png */; };
 		2D7653341768606B005BC401 /* frame_popup.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7653321768606B005BC401 /* frame_popup.png */; };
 		2D7653351768606B005BC401 /* frame_popup@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2D7653331768606B005BC401 /* frame_popup@2x.png */; };
+		2D958EEB176A95E10051DFFC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D958EEA176A95E10051DFFC /* AVFoundation.framework */; };
+		2D958EED176A96880051DFFC /* marioDance.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2D958EEC176A96880051DFFC /* marioDance.mp3 */; };
 		2D9C96701769031B00DBADAA /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966B1769031B00DBADAA /* Accounts.framework */; };
 		2D9C96711769031B00DBADAA /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966C1769031B00DBADAA /* AdSupport.framework */; };
 		2D9C96721769031B00DBADAA /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D9C966D1769031B00DBADAA /* libsqlite3.dylib */; };
@@ -124,6 +126,8 @@
 		2D76532C17683158005BC401 /* button_dance_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button_dance_on@2x.png"; sourceTree = "<group>"; };
 		2D7653321768606B005BC401 /* frame_popup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = frame_popup.png; sourceTree = "<group>"; };
 		2D7653331768606B005BC401 /* frame_popup@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "frame_popup@2x.png"; sourceTree = "<group>"; };
+		2D958EEA176A95E10051DFFC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		2D958EEC176A96880051DFFC /* marioDance.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marioDance.mp3; sourceTree = "<group>"; };
 		2D9C966B1769031B00DBADAA /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		2D9C966C1769031B00DBADAA /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2D9C966D1769031B00DBADAA /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
@@ -142,6 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2D958EEB176A95E10051DFFC /* AVFoundation.framework in Frameworks */,
 				2D9C967C1769045400DBADAA /* FacebookSDK.framework in Frameworks */,
 				2D9C96701769031B00DBADAA /* Accounts.framework in Frameworks */,
 				2D9C96711769031B00DBADAA /* AdSupport.framework in Frameworks */,
@@ -177,6 +182,7 @@
 		2D7652BE17681F3D005BC401 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2D958EEA176A95E10051DFFC /* AVFoundation.framework */,
 				2D9C967B1769045400DBADAA /* FacebookSDK.framework */,
 				2D9C96791769044700DBADAA /* FacebookSDKResources.bundle */,
 				2D9C966B1769031B00DBADAA /* Accounts.framework */,
@@ -213,6 +219,7 @@
 		2D7652C617681F3D005BC401 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				2D958EEC176A96880051DFFC /* marioDance.mp3 */,
 				2D76533117685D4F005BC401 /* images */,
 				2D7652E8176821AA005BC401 /* Default.png */,
 				2D7652E9176821AA005BC401 /* Default@2x.png */,
@@ -363,6 +370,7 @@
 				2D9C9680176929FA00DBADAA /* icon_facebook_portrait@2x.png in Resources */,
 				2D6041071769BA9F008DBD5C /* Super Paper Mario.png in Resources */,
 				2D60410D1769C314008DBD5C /* super_paper_mario_-_luigi_2.png in Resources */,
+				2D958EED176A96880051DFFC /* marioDance.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

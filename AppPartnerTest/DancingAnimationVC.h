@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <AVFoundation/AVFoundation.h>    
 
-@interface DancingAnimationVC : UIViewController
+@interface DancingAnimationVC : UIViewController<AVAudioPlayerDelegate>
 
 @end
