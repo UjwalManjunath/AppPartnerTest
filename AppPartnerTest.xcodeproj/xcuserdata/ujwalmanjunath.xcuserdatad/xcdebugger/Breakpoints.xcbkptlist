@@ -73,11 +73,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AppPartnerTest/FacebookFriendsVC.m"
-         timestampString = "392878296.84644"
+         timestampString = "392879971.744928"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "33"
-         endingLineNumber = "33"
+         startingLineNumber = "32"
+         endingLineNumber = "32"
          landmarkName = "-fbFriendsList"
          landmarkType = "5">
       </FileBreakpoint>
@@ -86,11 +86,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "AppPartnerTest/FacebookFriendsVC.m"
-         timestampString = "392878296.84644"
+         timestampString = "392879971.744928"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "35"
-         endingLineNumber = "35"
+         startingLineNumber = "34"
+         endingLineNumber = "34"
          landmarkName = "-fbFriendsList"
          landmarkType = "5">
       </FileBreakpoint>
